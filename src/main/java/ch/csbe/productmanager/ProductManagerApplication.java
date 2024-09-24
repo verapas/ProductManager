@@ -1,4 +1,4 @@
-package ch.csbe.productmanager.resources;
+package ch.csbe.productmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

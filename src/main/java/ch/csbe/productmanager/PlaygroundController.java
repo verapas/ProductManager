@@ -1,4 +1,4 @@
-package ch.csbe.productmanager.resources;
+package ch.csbe.productmanager;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,5 +11,7 @@ public class PlaygroundController {
     public String helloWorld(){
         return "Hello Java Spring Boot";
     }
+
+
 }
 
