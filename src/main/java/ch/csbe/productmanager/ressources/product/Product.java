@@ -24,17 +24,18 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     private List<Category> categories;
 
-    // Standard-Konstruktor
-    public Product() {
-    }
 
-    // Konstruktor mit Parametern
+
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    // Getter und Setter
+    public Product() {
+
+    }
+
+
     public Long getId() {
         return id;
     }

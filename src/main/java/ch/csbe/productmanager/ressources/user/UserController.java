@@ -1,28 +1,39 @@
 package ch.csbe.productmanager.ressources.user;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userService.findAll();
+    }
 
     @GetMapping("/{id}")
     public String getUser(@PathVariable int id) {
-        return "User mit ID: " + id;
+        return "User with ID: " + id;
     }
 
     @PostMapping
     public String createUser(@RequestBody String user) {
-        return "User erstellt: " + user;
+        return "User created: " + user;
     }
 
     @PutMapping("{id}")
     public String updateUser(@PathVariable int id, @RequestBody String user) {
-        return "User mit ID: " + id + "aktualisiert: " + user;
+        return "User with ID: " + id + " updated: " + user;
     }
 
     @DeleteMapping("{id}")
     public String deleteUser(@PathVariable int id) {
-        return "User mit ID: " + id + "gelöscht";
+        return "User with ID: " + id + " deleted";
     }
 }
