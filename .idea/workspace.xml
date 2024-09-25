@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryDetailDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryShowDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryUpdateDto.java" afterDir="false" />
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Implement DTOs and Mapper for Category entity. &#10;Updated CategoryService and CategoryController to use new DTOs and CategoryMapper for all CRUD operations">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserDetailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserShowDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserUpdateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <workItem from="1727262647577" duration="2181000" />
       <workItem from="1727264945769" duration="309000" />
       <workItem from="1727265263244" duration="428000" />
-      <workItem from="1727265703497" duration="6048000" />
+      <workItem from="1727265703497" duration="7845000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -243,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727267553091</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implement DTOs and Mapper for Category entity. &#10;Updated CategoryService and CategoryController to use new DTOs and CategoryMapper for all CRUD operations">
+      <option name="closed" value="true" />
+      <created>1727272422838</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727272422838</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +281,7 @@
     <MESSAGE value="Removed bidirectional mapping from User to Product due to an error during application execution after implementing the required data model." />
     <MESSAGE value="Add dependencies for Lombok, MapStruct, and Spring Boot Validation" />
     <MESSAGE value="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct" />
+    <MESSAGE value="Implement DTOs and Mapper for Category entity. &#10;Updated CategoryService and CategoryController to use new DTOs and CategoryMapper for all CRUD operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement DTOs and Mapper for Category entity. &#10;Updated CategoryService and CategoryController to use new DTOs and CategoryMapper for all CRUD operations" />
   </component>
 </project>

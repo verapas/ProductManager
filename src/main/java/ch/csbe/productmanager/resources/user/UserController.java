@@ -1,5 +1,6 @@
 package ch.csbe.productmanager.resources.user;
 
+import ch.csbe.productmanager.resources.user.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,27 +14,27 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<User> getAllUsers() {
+    public List<UserShowDto> getAllUsers() {
         return userService.findAll();
     }
 
     @GetMapping("/{id}")
-    public String getUser(@PathVariable int id) {
-        return "User with ID: " + id;
+    public UserDetailDto getUserById(@PathVariable Long id) {
+        return userService.findById(id);
     }
 
     @PostMapping
-    public String createUser(@RequestBody String user) {
-        return "User created: " + user;
+    public UserDetailDto createUser(@RequestBody UserCreateDto dto) {
+        return userService.create(dto);
     }
 
-    @PutMapping("{id}")
-    public String updateUser(@PathVariable int id, @RequestBody String user) {
-        return "User with ID: " + id + " updated: " + user;
+    @PutMapping("/{id}")
+    public UserDetailDto updateUser(@PathVariable Long id, @RequestBody UserUpdateDto dto) {
+        return userService.update(id, dto);
     }
 
-    @DeleteMapping("{id}")
-    public String deleteUser(@PathVariable int id) {
-        return "User with ID: " + id + " deleted";
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        userService.delete(id);
     }
 }
