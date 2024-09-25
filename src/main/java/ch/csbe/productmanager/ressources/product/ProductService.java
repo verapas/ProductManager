@@ -10,7 +10,7 @@ import java.util.List;
 public class ProductService {
 
     @Autowired
-    private ProductRepository productRepository;
+    ProductRepository productRepository;
 
     public Product findById(Long id) {
         return this.productRepository.findById(id)

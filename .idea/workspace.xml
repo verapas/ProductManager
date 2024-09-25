@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Add methods in all controller classes to retrieve all users, products, and categories">
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Change ID generation strategy to GenerationType.IDENTITY for MariaDB compatibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +132,8 @@
       <workItem from="1727177860366" duration="6144000" />
       <workItem from="1727184142623" duration="2602000" />
       <workItem from="1727186867042" duration="304000" />
-      <workItem from="1727199853774" duration="1952000" />
+      <workItem from="1727199853774" duration="2639000" />
+      <workItem from="1727244410658" duration="3613000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -188,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727201473555</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change ID generation strategy to GenerationType.IDENTITY for MariaDB compatibility">
+      <option name="closed" value="true" />
+      <created>1727201981858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727201981858</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +224,7 @@
     <MESSAGE value="Add Repository and Service entities. Update pom.xml. Update application.yml" />
     <MESSAGE value="Add CategoryService and ProductService" />
     <MESSAGE value="Add methods in all controller classes to retrieve all users, products, and categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add methods in all controller classes to retrieve all users, products, and categories" />
+    <MESSAGE value="Change ID generation strategy to GenerationType.IDENTITY for MariaDB compatibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change ID generation strategy to GenerationType.IDENTITY for MariaDB compatibility" />
   </component>
 </project>

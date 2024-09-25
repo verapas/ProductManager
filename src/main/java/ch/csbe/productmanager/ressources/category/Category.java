@@ -1,7 +1,7 @@
 package ch.csbe.productmanager.ressources.category;
 
-import jakarta.persistence.*;
 import ch.csbe.productmanager.ressources.product.Product;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
@@ -11,18 +11,24 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "tinyint", nullable = false)
+    private boolean active;
+
     @Column(columnDefinition = "varchar(255)", nullable = false)
     private String name;
 
-    @ManyToMany
-    @JoinTable(
-            name = "product_category",
-            joinColumns = @JoinColumn(name = "category_id"),
-            inverseJoinColumns = @JoinColumn(name = "product_id")
-    )
-
+    @OneToMany(mappedBy = "category")
     private List<Product> products;
 
+    public Category() {
+    }
+
+    public Category(boolean active, String name) {
+        this.active = active;
+        this.name = name;
+    }
+
+    // Getter und Setter
 
     public Long getId() {
         return id;
@@ -30,6 +36,14 @@ public class Category {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public String getName() {

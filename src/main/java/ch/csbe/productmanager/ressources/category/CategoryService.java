@@ -10,7 +10,7 @@ import java.util.List;
 public class CategoryService {
 
     @Autowired
-    private CategoryRepository categoryRepository;
+    CategoryRepository categoryRepository;
 
     public Category findById(Long id) {
         return this.categoryRepository.findById(id)

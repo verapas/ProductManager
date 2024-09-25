@@ -1,8 +1,8 @@
 package ch.csbe.productmanager.ressources.product;
+
 import ch.csbe.productmanager.ressources.category.Category;
 import ch.csbe.productmanager.ressources.user.User;
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 public class Product {
@@ -11,30 +11,46 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "varchar(255)", nullable = false)
+    @Column(columnDefinition = "varchar(100)", nullable = false)
+    private String sku;
+
+    @Column(columnDefinition = "tinyint", nullable = false)
+    private boolean active;
+
+    @Column(columnDefinition = "varchar(500)", nullable = false)
     private String name;
 
-    @Column(columnDefinition = "decimal(10,2)", nullable = false)
-    private double price;
+    @Column(columnDefinition = "varchar(1000)", nullable = true)
+    private String image;
+
+    @Column(columnDefinition = "mediumtext", nullable = true)
+    private String description;
+
+    @Column(columnDefinition = "float", nullable = false)
+    private float price;
+
+    @Column(columnDefinition = "int", nullable = false)
+    private int stock;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User owner;
-
-    @ManyToMany(mappedBy = "products")
-    private List<Category> categories;
-
-
-
-    public Product(String name, double price) {
-        this.name = name;
-        this.price = price;
-    }
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
 
     public Product() {
-
     }
 
+    public Product(String sku, boolean active, String name, String image, String description, float price, int stock, Category category) {
+        this.sku = sku;
+        this.active = active;
+        this.name = name;
+        this.image = image;
+        this.description = description;
+        this.price = price;
+        this.stock = stock;
+        this.category = category;
+    }
+
+    // Getter und Setter
 
     public Long getId() {
         return id;
@@ -42,6 +58,22 @@ public class Product {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public String getName() {
@@ -52,11 +84,43 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
         this.price = price;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
