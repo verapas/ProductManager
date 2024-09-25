@@ -1,6 +1,9 @@
 package ch.csbe.productmanager.resources.category;
+
+import ch.csbe.productmanager.resources.category.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -11,27 +14,27 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping
-    public List<Category> getAllCategories() {
+    public List<CategoryShowDto> getAllCategories() {
         return categoryService.findAll();
     }
 
     @GetMapping("/{id}")
-    public String getCategory(@PathVariable int id) {
-        return "Category with ID: " + id;
+    public CategoryDetailDto getCategoryById(@PathVariable Long id) {
+        return categoryService.findById(id);
     }
 
     @PostMapping
-    public String createCategory(@RequestBody String category) {
-        return "Category created: " + category;
+    public CategoryDetailDto createCategory(@RequestBody CategoryCreateDto dto) {
+        return categoryService.create(dto);
     }
 
-    @PutMapping("{id}")
-    public String updateCategory(@PathVariable int id, @RequestBody String category) {
-        return "Category with ID: " + id + " updated: " + category;
+    @PutMapping("/{id}")
+    public CategoryDetailDto updateCategory(@PathVariable Long id, @RequestBody CategoryUpdateDto dto) {
+        return categoryService.update(id, dto);
     }
 
-    @DeleteMapping("{id}")
-    public String deleteCategory(@PathVariable int id) {
-        return "Category with ID: " + id + " deleted";
+    @DeleteMapping("/{id}")
+    public void deleteCategory(@PathVariable Long id) {
+        categoryService.delete(id);
     }
 }

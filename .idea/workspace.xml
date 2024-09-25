@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Add dependencies for Lombok, MapStruct, and Spring Boot Validation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductDetailDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductShowDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryDetailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryShowDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryUpdateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/ressources/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +145,7 @@
       <workItem from="1727262647577" duration="2181000" />
       <workItem from="1727264945769" duration="309000" />
       <workItem from="1727265263244" duration="428000" />
-      <workItem from="1727265703497" duration="1521000" />
+      <workItem from="1727265703497" duration="6048000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -248,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727250864801</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct">
+      <option name="closed" value="true" />
+      <created>1727267553091</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727267553091</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +272,7 @@
     <MESSAGE value="Update Product and Category entities to match the specified data model. Minor Changes in service classes to match school template" />
     <MESSAGE value="Removed bidirectional mapping from User to Product due to an error during application execution after implementing the required data model." />
     <MESSAGE value="Add dependencies for Lombok, MapStruct, and Spring Boot Validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dependencies for Lombok, MapStruct, and Spring Boot Validation" />
+    <MESSAGE value="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct" />
   </component>
 </project>
