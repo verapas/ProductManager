@@ -20,9 +20,10 @@ public class User {
     @Column(columnDefinition = "varchar(255)", nullable = false)
     private String role;
 
-    @OneToMany(mappedBy = "owner")
-    private List<Product> products;
 
+
+    public User() {
+    }
 
 
     public Long getId() {
@@ -55,13 +56,5 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
     }
 }
