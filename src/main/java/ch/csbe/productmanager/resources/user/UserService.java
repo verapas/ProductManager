@@ -1,7 +1,5 @@
-package ch.csbe.productmanager.ressources.user;
+package ch.csbe.productmanager.resources.user;
 import ch.csbe.productmanager.exception.ResourceNotFoundException;
-import ch.csbe.productmanager.ressources.user.User;
-import ch.csbe.productmanager.ressources.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

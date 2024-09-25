@@ -1,8 +1,6 @@
-package ch.csbe.productmanager.ressources.user;
+package ch.csbe.productmanager.resources.user;
 
 import jakarta.persistence.*;
-import ch.csbe.productmanager.ressources.product.Product;
-import java.util.List;
 
 @Entity
 public class User {

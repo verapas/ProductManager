@@ -1,7 +1,6 @@
-package ch.csbe.productmanager.ressources.product;
+package ch.csbe.productmanager.resources.product;
 
-import ch.csbe.productmanager.ressources.category.Category;
-import ch.csbe.productmanager.ressources.user.User;
+import ch.csbe.productmanager.resources.category.Category;
 import jakarta.persistence.*;
 
 @Entity
@@ -50,7 +49,7 @@ public class Product {
         this.category = category;
     }
 
-    // Getter und Setter
+
 
     public Long getId() {
         return id;

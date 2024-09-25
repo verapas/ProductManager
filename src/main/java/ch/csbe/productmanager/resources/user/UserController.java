@@ -1,4 +1,4 @@
-package ch.csbe.productmanager.ressources.user;
+package ch.csbe.productmanager.resources.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

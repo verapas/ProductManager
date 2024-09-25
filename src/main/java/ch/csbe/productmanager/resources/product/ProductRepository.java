@@ -1,4 +1,4 @@
-package ch.csbe.productmanager.ressources.product;
+package ch.csbe.productmanager.resources.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

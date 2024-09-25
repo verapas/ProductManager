@@ -1,4 +1,4 @@
-package ch.csbe.productmanager.ressources.category;
+package ch.csbe.productmanager.resources.category;
 
 import ch.csbe.productmanager.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
