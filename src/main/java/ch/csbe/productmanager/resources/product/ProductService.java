@@ -25,7 +25,7 @@ public class ProductService {
         return productMapper.toShowDto(product);
     }
 
-    public List<ProductShowDto> findAll() {
+    public List<ProductShowDto> findAll(String filterByCategory) {
         List<Product> products = this.productRepository.findAll();
         List<ProductShowDto> productShowDtos = new ArrayList<>();
         for (Product product : products) {
