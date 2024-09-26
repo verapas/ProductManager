@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Added Tag annotations and corresponding localhost URLs to all Controllers">
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Updated endpoint documentation in Controllers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +144,7 @@
       <workItem from="1727265703497" duration="7845000" />
       <workItem from="1727330609949" duration="478000" />
       <workItem from="1727331098788" duration="1198000" />
-      <workItem from="1727332428676" duration="17137000" />
+      <workItem from="1727332428676" duration="22104000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -275,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727347092840</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Updated endpoint documentation in Controllers">
+      <option name="closed" value="true" />
+      <created>1727353533201</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727353533201</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +316,7 @@
     <MESSAGE value="Implement DTOs and Mapper for User entity&#10;Updated UserService and UserController to use new DTOs and UserMapper for all CRUD operations" />
     <MESSAGE value="Added detailed Swagger/OpenAPI documentation for all DTO's" />
     <MESSAGE value="Added Tag annotations and corresponding localhost URLs to all Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Tag annotations and corresponding localhost URLs to all Controllers" />
+    <MESSAGE value="Updated endpoint documentation in Controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated endpoint documentation in Controllers" />
   </component>
 </project>
