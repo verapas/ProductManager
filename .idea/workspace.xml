@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Implement DTOs and Mapper for User entity&#10;Updated UserService and UserController to use new DTOs and UserMapper for all CRUD operations">
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Added detailed Swagger/OpenAPI documentation for all DTO's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryShowDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryShowDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/dto/CategoryUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductShowDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductShowDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/dto/ProductUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserShowDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserShowDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +144,7 @@
       <workItem from="1727265703497" duration="7845000" />
       <workItem from="1727330609949" duration="478000" />
       <workItem from="1727331098788" duration="1198000" />
-      <workItem from="1727332428676" duration="8364000" />
+      <workItem from="1727332428676" duration="10786000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -268,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727276227101</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added detailed Swagger/OpenAPI documentation for all DTO's">
+      <option name="closed" value="true" />
+      <created>1727342569279</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1727342569279</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +298,7 @@
     <MESSAGE value="Implement DTOs for Product entity and update service/controller logic&#10; -Set Java version to 17 in pom.xml for compatibility and stability&#10; -Adjusted Maven properties and dependencies for proper compilation and processing with Lombok and MapStruct" />
     <MESSAGE value="Implement DTOs and Mapper for Category entity. &#10;Updated CategoryService and CategoryController to use new DTOs and CategoryMapper for all CRUD operations" />
     <MESSAGE value="Implement DTOs and Mapper for User entity&#10;Updated UserService and UserController to use new DTOs and UserMapper for all CRUD operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement DTOs and Mapper for User entity&#10;Updated UserService and UserController to use new DTOs and UserMapper for all CRUD operations" />
+    <MESSAGE value="Added detailed Swagger/OpenAPI documentation for all DTO's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added detailed Swagger/OpenAPI documentation for all DTO's" />
   </component>
 </project>
