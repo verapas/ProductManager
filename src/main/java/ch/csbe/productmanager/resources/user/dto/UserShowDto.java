@@ -19,4 +19,8 @@ public class UserShowDto {
     @NotNull
     @Schema(description = "Rolle des Benutzers (z.B. ADMIN, USER)", example = "USER")
     private String role;
+
+    @NotNull
+    @Schema(description = "E-Mail-Adresse des Benutzers", example = "example@example.com")
+    private String email;
 }

@@ -1,6 +1,7 @@
 package ch.csbe.productmanager.resources.user.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Email;
 import lombok.Data;
 import jakarta.validation.constraints.NotNull;
 
@@ -19,4 +20,9 @@ public class UserCreateDto {
     @NotNull
     @Schema(description = "Rolle des Benutzers (z.B. ADMIN, USER)", example = "ADMIN")
     private String role;
+
+    @NotNull
+    @Email
+    @Schema(description = "E-Mail-Adresse des Benutzers", example = "pasvera@example.com")
+    private String email;
 }

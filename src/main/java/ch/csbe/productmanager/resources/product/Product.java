@@ -3,8 +3,6 @@ package ch.csbe.productmanager.resources.product;
 import ch.csbe.productmanager.resources.category.Category;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 @Entity
