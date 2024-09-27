@@ -10,4 +10,9 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: create-drop
+  flyway:
+    url: jdbc:mariadb://localhost:3307/ProductManager
+    schemas: productmanager
+    user: "root"
+    password: "admin123"
 
