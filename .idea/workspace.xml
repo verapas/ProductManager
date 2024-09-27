@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Implemented security features:&#10;- Added JWT authentication and authorization using JwtRequestFilter.&#10;- Configured security settings in SecurityConfiguration.&#10;- Integrated TokenService for generating and validating JWT tokens.&#10;- Updated UserService to include password encryption and user authentication.&#10;- Implemented login functionality with JWT token generation.">
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Update Security Configuration and User DTOs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/JwtRequestFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserShowDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserShowDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/dto/UserUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
       <workItem from="1727331098788" duration="1198000" />
       <workItem from="1727332428676" duration="31606000" />
       <workItem from="1727416831433" duration="4584000" />
-      <workItem from="1727421445282" duration="8092000" />
+      <workItem from="1727421445282" duration="13654000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -327,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727427281794</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update Security Configuration and User DTOs">
+      <option name="closed" value="true" />
+      <created>1727430384814</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1727430384814</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +373,7 @@
     <MESSAGE value="Added JWT and XML Binding dependencies to pom.xml:" />
     <MESSAGE value="Added Missing artifactId in pom.xml" />
     <MESSAGE value="Implemented security features:&#10;- Added JWT authentication and authorization using JwtRequestFilter.&#10;- Configured security settings in SecurityConfiguration.&#10;- Integrated TokenService for generating and validating JWT tokens.&#10;- Updated UserService to include password encryption and user authentication.&#10;- Implemented login functionality with JWT token generation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented security features:&#10;- Added JWT authentication and authorization using JwtRequestFilter.&#10;- Configured security settings in SecurityConfiguration.&#10;- Integrated TokenService for generating and validating JWT tokens.&#10;- Updated UserService to include password encryption and user authentication.&#10;- Implemented login functionality with JWT token generation." />
+    <MESSAGE value="Update Security Configuration and User DTOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Security Configuration and User DTOs" />
   </component>
 </project>

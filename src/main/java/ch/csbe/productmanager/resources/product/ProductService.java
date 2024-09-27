@@ -21,7 +21,7 @@ public class ProductService {
 
     public ProductShowDto findById(Long id) {
         Product product = this.productRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Product with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Produkt mit der ID " + id + " konnte nicht gefunden werden!"));
         return productMapper.toShowDto(product);
     }
 
@@ -43,7 +43,7 @@ public class ProductService {
 
     public ProductShowDto update(Long id, ProductUpdateDto dto) {
         Product product = this.productRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Product with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Produkt mit der ID " + id + " konnte nicht gefunden werden!"));
         productMapper.updateEntity(dto, product);
         Product updatedProduct = productRepository.save(product);
         return productMapper.toShowDto(updatedProduct);
@@ -51,7 +51,7 @@ public class ProductService {
 
     public void delete(Long id) {
         Product product = this.productRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Product with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Produkt mit der ID " + id + " konnte nicht gefunden werden!"));
         productRepository.delete(product);
     }
 }

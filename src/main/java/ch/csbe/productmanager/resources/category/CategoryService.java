@@ -26,7 +26,7 @@ public class CategoryService {
 
     public CategoryDetailDto findById(Long id) {
         Category category = this.categoryRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Category with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Kategorie mit der ID " + id + " konnte nicht gefunden werden!"));
         return categoryMapper.toDetailDto(category);
     }
 
@@ -38,7 +38,7 @@ public class CategoryService {
 
     public CategoryDetailDto update(Long id, CategoryUpdateDto dto) {
         Category category = this.categoryRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Category with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Kategorie mit der ID " + id + " konnte nicht gefunden werden!"));
         categoryMapper.updateEntity(dto, category);
         Category updatedCategory = categoryRepository.save(category);
         return categoryMapper.toDetailDto(updatedCategory);

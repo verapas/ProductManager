@@ -31,19 +31,20 @@ public class UserService {
 
     public UserDetailDto findById(Long id) {
         User user = this.userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Benutzer mit der ID: " + id + " konnte nicht gefunden werden!"));
         return userMapper.toDetailDto(user);
     }
 
     public UserDetailDto create(UserCreateDto dto) {
         User user = userMapper.toEntity(dto);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         User savedUser = this.userRepository.save(user);
         return userMapper.toDetailDto(savedUser);
     }
 
     public UserDetailDto update(Long id, UserUpdateDto dto) {
         User user = this.userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User with the id " + id + " could not be found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Benutzer mit der ID: " + id + " konnte nicht gefunden werden!"));
         userMapper.updateEntity(dto, user);
         User updatedUser = userRepository.save(user);
         return userMapper.toDetailDto(updatedUser);
@@ -56,7 +57,7 @@ public class UserService {
     public User findUserByEmail(String email) {
         User user = userRepository.findByEmail(email);
         if (user == null) {
-            throw new ResourceNotFoundException("User with email " + email + " could not be found!");
+            throw new ResourceNotFoundException("Benutzer mit dieser E-Mail: " + email + " konnte nicht gefunden werden!");
         }
         return user;
     }
