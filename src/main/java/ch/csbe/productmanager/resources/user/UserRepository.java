@@ -6,6 +6,8 @@ import org.springframework.data.repository.query.Param;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
+    User findByEmail(String email);
+
     // Benutzerdefinierte Methode zur Abfrage eines Users nach ID
     @Query("SELECT u FROM User u WHERE u.id = :id")
     User getById(@Param("id") Long id);

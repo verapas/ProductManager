@@ -2,8 +2,13 @@ package ch.csbe.productmanager.resources.category;
 
 import ch.csbe.productmanager.resources.product.Product;
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Data
 @Entity
 public class Category {
 
@@ -28,37 +33,5 @@ public class Category {
         this.name = name;
     }
 
-    // Getter und Setter
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
 }

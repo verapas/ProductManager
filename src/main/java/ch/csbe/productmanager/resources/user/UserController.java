@@ -1,6 +1,8 @@
 package ch.csbe.productmanager.resources.user;
 
 import ch.csbe.productmanager.resources.user.dto.*;
+import ch.csbe.productmanager.resources.security.TokenService;
+import ch.csbe.productmanager.resources.security.TokenWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private TokenService tokenService;
 
     // URL: http://localhost:8080/users
     @GetMapping
@@ -98,4 +103,29 @@ public class UserController {
         userService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    // URL: http://localhost:8080/users/login
+    @PostMapping("login")
+    @Operation(summary = "Authentifiziert den Benutzer", description = "Überprüft die Anmeldedaten und gibt ein JWT zurück, wenn die Authentifizierung erfolgreich ist.")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Anmeldung erfolgreich, Token zurückgegeben"),
+            @ApiResponse(responseCode = "401", description = "Ungültige Anmeldedaten")
+    })
+
+
+    public ResponseEntity<TokenWrapper> login(
+            @Parameter(description = "Anmeldedaten des Benutzers")
+            @RequestBody LoginRequestDto loginRequestDto) {
+        User user = this.userService.getUserWithCredentials(loginRequestDto);
+        if (user != null) {
+            TokenWrapper tokenWrapper = new TokenWrapper();
+            String token = this.tokenService.generateToken(user);
+            tokenWrapper.setToken(token);
+            return ResponseEntity.ok(tokenWrapper);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+    }
+
+    //getUserByCredentials muss noch implementiert werden
 }
