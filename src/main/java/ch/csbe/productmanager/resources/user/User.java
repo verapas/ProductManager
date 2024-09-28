@@ -3,6 +3,9 @@ package ch.csbe.productmanager.resources.user;
 import jakarta.persistence.*;
 import lombok.Data;
 
+/**
+ * Repräsentiert ein Benutzer in der Datenbank
+ */
 @Data
 @Entity
 public class User {

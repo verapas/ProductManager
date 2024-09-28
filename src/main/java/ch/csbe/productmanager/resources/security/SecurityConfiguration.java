@@ -11,6 +11,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+
+/**
+ * SecurityConfiguration konfiguriert die Sicherheitsmassnahmen der Anwendung.
+ * Sie definiert, welche Endpunkte zugänglich sind und welche Authentifizierung erfordern,
+ * sowie die Rollenbasierte Autorisierung.
+ */
 @Configuration
 public class SecurityConfiguration {
 
@@ -18,6 +24,10 @@ public class SecurityConfiguration {
     @Lazy
     private JwtRequestFilter jwtRequestFilter;
 
+    /**
+     * Konfiguriert die Sicherheitsfilterkette, einschliesslich der CSRF-Einstellungen,
+     * Zugriffsberechtigungen für verschiedene Endpunkte und des JWT-Filters.
+     */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -26,6 +36,10 @@ public class SecurityConfiguration {
                 .requestMatchers(HttpMethod.POST, "/users").permitAll()
                 .requestMatchers("/auth/login", "/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/users/login").permitAll()
+                .requestMatchers(HttpMethod.GET, "/products/**", "/categories/**").permitAll()
+                .requestMatchers(HttpMethod.POST, "/products/**", "/categories/**").hasAnyRole("USER", "ADMIN")
+                .requestMatchers(HttpMethod.PUT, "/products/**", "/categories/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.DELETE, "/products/**", "/categories/**").hasRole("ADMIN")
                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -34,11 +48,14 @@ public class SecurityConfiguration {
         return http.build();
     }
 
+    /**
+     * Definiert einen Bean für die Passwortverschlüsselung mit BCrypt.
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }
 
-// Hier noch ein Permit all hinzuügen? Falls ich später
-// noch Authentifizierung ohne Endpunkte zulassen möchte
+
+

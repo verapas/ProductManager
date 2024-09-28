@@ -9,6 +9,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Repräsentiert den Benutzer im Spring Security-Kontext und implementiert UserDetails,
+ * um benutzerdefinierte Benutzerdaten für die Authentifizierung bereitzustellen.
+ */
 @Data
 public class MyUserPrincipal implements UserDetails {
 

@@ -15,6 +15,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
 
+/**
+ * Controller für die Verwaltung der CRUD-Operationen für Produkte.
+ */
 @RestController
 @Tag(name = "ProductController", description = "Verwaltet die CRUD-Operationen für Produkte")
 @RequestMapping("/products")
@@ -23,7 +26,9 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    // URL: http://localhost:8080/products
+    /**
+     * Listet alle Produkte auf, optional gefiltert nach einer Kategorie.
+     */
     @GetMapping
     @Operation(summary = "Listet alle Produkte auf", description = "Gibt eine Liste aller Produkte zurück. Optional kann nach Kategorie gefiltert werden.")
     @ApiResponse(responseCode = "200", description = "Erfolgreiches Abrufen der Produkte")
@@ -34,7 +39,9 @@ public class ProductController {
         return ResponseEntity.ok(products);
     }
 
-    // URL: http://localhost:8080/products/{id}
+    /**
+     * Findet ein Produkt nach seiner ID.
+     */
     @GetMapping("/{id}")
     @Operation(summary = "Findet ein Produkt nach ID", description = "Gibt die Details eines Produkts anhand der spezifischen ID zurück.")
     @ApiResponses({
@@ -51,7 +58,9 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
 
-    // URL: http://localhost:8080/products
+    /**
+     * Erstellt ein neues Produkt mit den angegebenen Daten.
+     */
     @PostMapping
     @Operation(summary = "Erstellt ein neues Produkt", description = "Erstellt ein neues Produkt mit den angegebenen Daten.")
     @ApiResponses({
@@ -65,7 +74,9 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdProduct);
     }
 
-    // URL: http://localhost:8080/products/{id}
+    /**
+     * Aktualisiert ein bestehendes Produkt anhand der spezifischen ID.
+     */
     @PutMapping("/{id}")
     @Operation(summary = "Aktualisiert ein Produkt", description = "Aktualisiert ein bestehendes Produkt anhand der spezifischen ID.")
     @ApiResponses({
@@ -85,7 +96,9 @@ public class ProductController {
         return ResponseEntity.ok(updatedProduct);
     }
 
-    // URL: http://localhost:8080/products/{id}
+    /**
+     * Löscht ein Produkt anhand der spezifischen ID.
+     */
     @DeleteMapping("/{id}")
     @Operation(summary = "Löscht ein Produkt", description = "Löscht ein Produkt anhand der spezifischen ID.")
     @ApiResponses({

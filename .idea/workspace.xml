@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Updated Security Configuration: Added permits for Swagger-UI and login endpoints&#10;Adjusted service class output messages to German.">
+    <list default="true" id="babb2d68-95db-408a-9282-91358a066ee4" name="Changes" comment="Added Flyway database migration tool configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/authentification/AuthentificationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/category/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/product/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/MyUserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/MyUserPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/TokenWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/security/TokenWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/csbe/productmanager/resources/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +171,7 @@
       <workItem from="1727331098788" duration="1198000" />
       <workItem from="1727332428676" duration="31606000" />
       <workItem from="1727416831433" duration="4584000" />
-      <workItem from="1727421445282" duration="14725000" />
+      <workItem from="1727421445282" duration="25661000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <option name="closed" value="true" />
@@ -338,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727437903497</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added Flyway database migration tool configuration">
+      <option name="closed" value="true" />
+      <created>1727439221827</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1727439221827</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +406,7 @@
     <MESSAGE value="Implemented security features:&#10;- Added JWT authentication and authorization using JwtRequestFilter.&#10;- Configured security settings in SecurityConfiguration.&#10;- Integrated TokenService for generating and validating JWT tokens.&#10;- Updated UserService to include password encryption and user authentication.&#10;- Implemented login functionality with JWT token generation." />
     <MESSAGE value="Update Security Configuration and User DTOs" />
     <MESSAGE value="Updated Security Configuration: Added permits for Swagger-UI and login endpoints&#10;Adjusted service class output messages to German." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Security Configuration: Added permits for Swagger-UI and login endpoints&#10;Adjusted service class output messages to German." />
+    <MESSAGE value="Added Flyway database migration tool configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Flyway database migration tool configuration" />
   </component>
 </project>

@@ -3,11 +3,11 @@ package ch.csbe.productmanager.resources.category;
 import ch.csbe.productmanager.resources.product.Product;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.List;
 
+/**
+ * Stellt eine Produktkategorie dar mit einer ID, Aktivitätsstatus und Namen.
+ */
 @Data
 @Entity
 public class Category {

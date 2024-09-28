@@ -1,9 +1,6 @@
 package ch.csbe.productmanager.resources.security;
 
-import ch.csbe.productmanager.resources.security.MyUserPrincipal;
-import ch.csbe.productmanager.resources.security.TokenService;
 import ch.csbe.productmanager.resources.user.User;
-
 import ch.csbe.productmanager.resources.user.UserService;
 import io.jsonwebtoken.Jwts;
 import jakarta.servlet.FilterChain;
@@ -15,10 +12,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-
 import java.io.IOException;
-import java.nio.file.attribute.UserPrincipal;
 
+/**
+ * Filterklasse, die JWTs aus eingehenden HTTP-Anfragen verarbeitet und die Authentifizierung durchführt.
+ */
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
     @Autowired
@@ -26,6 +24,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     @Autowired
     private TokenService tokenService;
 
+    /**
+     * Diese Methode wird für jede eingehende HTTP-Anfrage aufgerufen.
+     * Sie extrahiert das JWT aus der Autorisierungs-Header, validiert es und setzt die Authentifizierung im SecurityContext.
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
         final String authorizationHeader = request.getHeader("Authorization");
@@ -46,6 +48,9 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         chain.doFilter(request, response);
     }
 
+    /**
+     * Extrahiert den Benutzernamen oder die E-Mail aus einem gegebenen JWT.
+     */
     public String extractUsername(String token) {
         return Jwts.parser().setSigningKey(tokenService.getSecretKey()).parseClaimsJws(token).getBody().getSubject(); // E-Mail oder Benutzername aus dem Token extrahieren
     }

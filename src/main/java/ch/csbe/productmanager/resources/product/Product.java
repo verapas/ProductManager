@@ -4,6 +4,9 @@ import ch.csbe.productmanager.resources.category.Category;
 import jakarta.persistence.*;
 import lombok.Data;
 
+/**
+ * Repräsentiert ein Produkt in der Datenbank
+ */
 @Data
 @Entity
 public class Product {

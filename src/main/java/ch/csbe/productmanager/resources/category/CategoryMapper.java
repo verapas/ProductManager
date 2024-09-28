@@ -8,6 +8,10 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
+/**
+ * Der CategoryMapper wandelt die Category-Entitäten in
+ * DTO's um und umgekehrt.
+ */
 @Mapper(componentModel = "spring")
 public abstract class CategoryMapper {
 

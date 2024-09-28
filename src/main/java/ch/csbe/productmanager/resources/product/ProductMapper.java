@@ -7,9 +7,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
-@Mapper(
-        componentModel = "spring"
-)
+/**
+ * Mapper-Klasse für die Umwandlung von Produkt-Entitäten in DTOs und umgekehrt.
+ * Verwendet MapStruct zur automatischen Mappung von Feldern.
+ */
+@Mapper(componentModel = "spring")
 public abstract class ProductMapper {
     @Mapping(source = "id", target = "id")
     @Mapping(source = "name", target = "name")

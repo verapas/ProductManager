@@ -8,6 +8,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
+
+/**
+ * Mapper-Klasse für die Umwandlung von Benutzer-Entitäten in DTOs und umgekehrt.
+ * Diese Schnittstelle verwendet MapStruct, um automatisch Mapping-Implementierungen zu generieren.
+ */
 @Mapper(componentModel = "spring")
 public interface UserMapper {
 

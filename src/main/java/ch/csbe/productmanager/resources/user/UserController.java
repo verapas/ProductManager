@@ -15,6 +15,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
 
+/**
+ * Controller für die Verwaltung der CRUD-Operationen für Benutzer.
+ */
 @RestController
 @Tag(name = "UserController", description = "Verwaltet die CRUD-Operationen für Benutzer")
 @RequestMapping("/users")
@@ -26,7 +29,10 @@ public class UserController {
     @Autowired
     private TokenService tokenService;
 
-    // URL: http://localhost:8080/users
+    /**
+     * Listet alle Benutzer auf.
+     * URL: http://localhost:8080/users
+     */
     @GetMapping
     @Operation(summary = "Listet alle Benutzer auf", description = "Gibt eine Liste aller Benutzer zurück.")
     @ApiResponse(responseCode = "200", description = "Erfolgreiches Abrufen der Benutzer")
@@ -34,8 +40,10 @@ public class UserController {
         List<UserShowDto> users = userService.findAll();
         return ResponseEntity.ok(users);
     }
-
-    // URL: http://localhost:8080/users/{id}
+    /**
+     * Findet einen Benutzer nach ID.
+     * URL: http://localhost:8080/users/{id}
+     */
     @GetMapping("/{id}")
     @Operation(summary = "Findet einen Benutzer nach ID", description = "Gibt die Details eines Benutzers anhand der spezifischen ID zurück.")
     @ApiResponses({
@@ -52,7 +60,10 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    // URL: http://localhost:8080/users
+    /**
+     * Erstellt einen neuen Benutzer.
+     * URL: http://localhost:8080/users
+     */
     @PostMapping
     @Operation(summary = "Erstellt einen neuen Benutzer", description = "Erstellt einen neuen Benutzer mit den angegebenen Daten.")
     @ApiResponses({
@@ -66,7 +77,10 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }
 
-    // URL: http://localhost:8080/users/{id}
+    /**
+     * Aktualisiert einen bestehenden Benutzer.
+     * URL: http://localhost:8080/users/{id}
+     */
     @PutMapping("/{id}")
     @Operation(summary = "Aktualisiert einen Benutzer", description = "Aktualisiert einen bestehenden Benutzer anhand der spezifischen ID.")
     @ApiResponses({
@@ -86,7 +100,10 @@ public class UserController {
         return ResponseEntity.ok(updatedUser);
     }
 
-    // URL: http://localhost:8080/users/{id}
+    /**
+     * Löscht einen Benutzer.
+     * URL: http://localhost:8080/users/{id}
+     */
     @DeleteMapping("/{id}")
     @Operation(summary = "Löscht einen Benutzer", description = "Löscht einen Benutzer anhand der spezifischen ID.")
     @ApiResponses({
@@ -104,15 +121,16 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
-    // URL: http://localhost:8080/users/login
+    /**
+     * Authentifiziert den Benutzer und gibt ein JWT zurück.
+     * URL: http://localhost:8080/users/login
+     */
     @PostMapping("login")
     @Operation(summary = "Authentifiziert den Benutzer", description = "Überprüft die Anmeldedaten und gibt ein JWT zurück, wenn die Authentifizierung erfolgreich ist.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Anmeldung erfolgreich, Token zurückgegeben"),
             @ApiResponse(responseCode = "401", description = "Ungültige Anmeldedaten")
     })
-
-
     public ResponseEntity<TokenWrapper> login(
             @Parameter(description = "Anmeldedaten des Benutzers")
             @RequestBody LoginRequestDto loginRequestDto) {
