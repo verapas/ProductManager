@@ -26,7 +26,6 @@ public interface UserMapper {
     @Mapping(source = "role", target = "role")
     UserDetailDto toDetailDto(User user);
 
-    // Diese Methode konvertiert ein UserCreateDto in eine User-Entität
     @Mapping(source = "username", target = "username")
     @Mapping(source = "password", target = "password")
     @Mapping(source = "role", target = "role")

@@ -26,9 +26,9 @@ public class TokenService {
     public String generateToken(User user) {
         return Jwts.builder()
                 .setSubject(user.getEmail())
-                .claim("roles", user.getRole())  // Falls du mehrere Rollen hast, passe dies entsprechend an
+                .claim("roles", user.getRole())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))  // Token für 10 Stunden gültig
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
                 .signWith(SECRET_KEY)
                 .compact();
     }
