@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig">
+    <option name="reLastEntityCreationPackage" value="src/main/java/ch/csbe/productmanager" />
+    <option name="reverseEngineeringLastDbConnectionId" value="9e7a6936-516e-4b38-a647-e81f7fcd096f" />
+  </component>
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit name="Default">
+        <packages>
+          <package value="ch.csbe.productmanager" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>

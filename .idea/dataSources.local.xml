@@ -2,10 +2,18 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.17890.1">
     <data-source name="Product-Manager" uuid="9e7a6936-516e-4b38-a647-e81f7fcd096f">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" />
+      <database-info product="MariaDB" version="11.5.2-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="11.5.2" exact-driver-version="3.3">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="productmanager" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
