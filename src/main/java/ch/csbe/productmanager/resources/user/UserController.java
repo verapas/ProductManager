@@ -145,5 +145,4 @@ public class UserController {
         }
     }
 
-    //getUserByCredentials muss noch implementiert werden
 }
